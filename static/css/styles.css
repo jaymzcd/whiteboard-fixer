@@ -1,0 +1,9 @@
+.row {
+    margin: 0.5em 0 2em;
+}
+
+#dropzone {
+    width: 400px;
+    height: 400px;
+    border: dashed 3px #999;
+}
