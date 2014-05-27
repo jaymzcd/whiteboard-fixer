@@ -61,7 +61,8 @@ $('#dropzone').filedrop({
     uploadFinished: function(i, file, response, time) {
         // response is the data you got back from server in JSON format.
         console.log(response);
-        $('#dropzone').attr('src', response);
+        $('#dropzone').attr('src', response).removeClass('dzempty');
+        $('#imglink').attr('href', response).removeClass('btn-primary').addClass('btn-success').text('Open');
     },
     progressUpdated: function(i, file, progress) {
         // this function is used for large files and updates intermittently

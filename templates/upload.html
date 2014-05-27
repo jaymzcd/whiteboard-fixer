@@ -3,14 +3,22 @@
 {% block content %}
 <div class="row">
     <h3>Whiteboard photo fix</h3>
+    <p>Inspired by <a href="https://gist.github.com/lelandbatey/8677901">post</a> with an ImageMagick script,
+        this simply wraps a small webservice around the script and has a drag and drop uploader. This is
+        not <em>production ready</em> in any form! Use at your own risk, though that said <a href="http://flask.pocoo.org/">Flask</a> is pretty solid. Images are stored in a temporary location and may be removed at any time so please save anything you process.
+    </p>
 </div>
 
 <div class="row">
     <div class="col-md-3">
-        <a href="#fakelink" class="btn btn-primary btn-lg btn-block">Drag and drop an image to process it</a>
+        <a href="#" id="imglink" class="btn btn-primary btn-lg btn-block" target="_blank">Drag and drop an image to process it</a>
     </div>
     <div class="col-md-3">
-        <img id="dropzone"></img>
+        <img id="dropzone" class="dzempty"></img>
     </div>
+</div>
+
+<div class="row">
+    <p><small>Credits: Framework: <a href="http://flask.pocoo.org/">Flask</a>, Design: <a href="http://designmodo.github.io/Flat-UI/">Flat-UI Bootstrap</a>, DnD: <a href="https://github.com/weixiyen/jquery-filedrop">jQuery FileDrop</a>, Magick: <a href="https://gist.github.com/lelandbatey/8677901">lelandbatey</a></small></p>
 </div>
 {% endblock %}

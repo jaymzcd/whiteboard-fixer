@@ -3,7 +3,14 @@
 }
 
 #dropzone {
-    width: 400px;
-    height: 400px;
+    display: block;
+    max-width: 300px;
+    max-height: 300px;
+    width: 300px;
+    height: auto;
     border: dashed 3px #999;
+}
+
+#dropzone.dzempty {
+    min-height: 300px;
 }
