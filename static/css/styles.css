@@ -9,8 +9,16 @@
     width: 300px;
     height: auto;
     border: dashed 3px #999;
+    -webkit-transition : border 500ms ease-out;
+    -moz-transition : border 500ms ease-out;
+    -o-transition : border 500ms ease-out;
 }
 
 #dropzone.dzempty {
     min-height: 300px;
+}
+
+.domore {
+    font-style: italic;
+    display: none;
 }

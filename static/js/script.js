@@ -57,16 +57,21 @@ $('#dropzone').filedrop({
         // file is the actual file of the index
         // len = total files user dropped
         console.log("Started", file);
+        $('#imglink').removeClass('btn-primary').addClass('btn-danger').text('Uploading...')
     },
     uploadFinished: function(i, file, response, time) {
         // response is the data you got back from server in JSON format.
         console.log(response);
         $('#dropzone').attr('src', response).removeClass('dzempty');
-        $('#imglink').attr('href', response).removeClass('btn-primary').addClass('btn-success').text('Open');
+        $('#imglink').attr('href', response).removeClass('btn-warning').addClass('btn-success').text('Open');
+        $('.domore').fadeIn('slow');
     },
     progressUpdated: function(i, file, progress) {
         // this function is used for large files and updates intermittently
         // progress is the integer value of file being uploaded percentage to completion
+        if(progress == 100) {
+            $('#imglink').removeClass('btn-danger').addClass('btn-warning').text('Processing...')
+        }
     },
     globalProgressUpdated: function(progress) {
         // progress for all the files uploaded on the current instance (percentage)
