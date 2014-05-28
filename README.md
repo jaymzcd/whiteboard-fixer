@@ -3,6 +3,7 @@
 A Flask webapp that launches an imagemagick script from @lelandbatey (source
 on [hackernews](https://news.ycombinator.com/item?id=7519093)).
 
+![](http://i.imgur.com/4MKzxte.png)
 
 ## Example
 
